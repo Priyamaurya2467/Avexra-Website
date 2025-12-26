@@ -1,9 +1,14 @@
+import Link from "next/link";
+
+import Background from "../layout/Background";
 import WorkflowCanvas from "./WorkflowCanvas";
 
 export default function Hero() {
   return (
     <main className="relative z-10 flex flex-col items-center">
       <section className="relative w-full pt-40 pb-20 lg:pt-45 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto min-h-screen flex items-center">
+        <Background />
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center w-full">
           {/* Left Content */}
           <div className="lg:col-span-5 flex flex-col gap-8 text-center lg:text-left z-20">
@@ -66,7 +71,7 @@ export default function Hero() {
               <button className="group relative flex items-center justify-center h-14 px-8 rounded-full bg-primary text-white font-bold text-lg overflow-hidden transition-all duration-300 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-105 w-full sm:w-auto">
                 <div className="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-shine skew-x-12" />
                 <span className="relative z-10 flex items-center gap-2">
-                  Talk to Experts
+                  <Link href="/contact">Talk to Experts</Link>
                   <span
                     className="material-symbols-outlined relative z-10 group-hover:translate-x-1 transition-transform"
                     style={{
@@ -170,6 +175,8 @@ export default function Hero() {
           <div className="lg:col-span-7">
             <WorkflowCanvas />
           </div>
+
+          {/* <div className="fixed inset-0 grid-bg opacity-80 -z-10 pointer-events-none"></div> */}
         </div>
       </section>
     </main>

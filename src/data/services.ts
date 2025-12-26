@@ -21,7 +21,7 @@ export const services: ServiceItem[] = [
     icon: "chat_bubble",
     title: "Intelligent Chatbots",
     description:
-      "Next-gen conversational AI for 24/7 customer support and internal knowledge retrieval, powered by LLMs.",
+      "Avexra conversational AI for 24/7 customer support and internal knowledge retrieval, powered by LLMs.",
     cta: "See Chat Solutions",
     animationDelay: "delay-2",
   },

@@ -4,12 +4,10 @@ import type { ReactNode } from "react";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-white border-t border-slate-200 pt-16 pb-10">
+    <footer className="relative bg-white border-t border-slate-200 pt-16 pb-10 z-10">
       <div className="max-w-[1280px] mx-auto px-6">
-
         {/* TOP */}
         <div className="flex flex-col lg:flex-row justify-between gap-16">
-
           {/* LEFT */}
           <div className="flex flex-col gap-6 max-w-md">
             <Link href="/" className="flex items-center gap-3">
@@ -25,8 +23,8 @@ export default function Footer() {
             </Link>
 
             <p className="text-slate-500 text-sm leading-relaxed">
-              Engineering intelligent, agentic systems for enterprises.
-              We build scalable AI automation, analytics, and custom platforms.
+              Engineering intelligent, agentic systems for enterprises. We build
+              scalable AI automation, analytics, and custom platforms.
             </p>
 
             {/* CONTACT ROW */}
@@ -83,10 +81,7 @@ export default function Footer() {
               type="linkedin"
               href="https://linkedin.com/company/avexra-ai"
             />
-            <SocialIcon
-              type="x"
-              href="https://x.com/avexraai"
-            />
+            <SocialIcon type="x" href="https://x.com/avexraai" />
           </div>
         </div>
       </div>
@@ -144,11 +139,7 @@ function ContactItem({
 
   if (isExternal) {
     return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={href} target="_blank" rel="noopener noreferrer">
         {content}
       </a>
     );
@@ -195,7 +186,13 @@ const socialMap: Record<string, ReactNode> = {
 
 function MailIcon() {
   return (
-    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+    <svg
+      className="w-4 h-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+    >
       <path d="M3 5h18l-9 7-9-7v14h18V5z" />
     </svg>
   );
@@ -203,7 +200,13 @@ function MailIcon() {
 
 function PhoneIcon() {
   return (
-    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+    <svg
+      className="w-4 h-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+    >
       <path d="M22 16.9V21a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3 5.2 2 2 0 0 1 5 3h4.1a2 2 0 0 1 2 1.7c.1.8.3 1.6.6 2.4a2 2 0 0 1-.5 2.1L10 10.9a16 16 0 0 0 6.2 6.2l1.7-1.7a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.4.6a2 2 0 0 1 1.6 1.9z" />
     </svg>
   );
@@ -211,7 +214,13 @@ function PhoneIcon() {
 
 function LocationIcon() {
   return (
-    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+    <svg
+      className="w-4 h-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+    >
       <path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7z" />
       <circle cx="12" cy="9" r="2.5" />
     </svg>

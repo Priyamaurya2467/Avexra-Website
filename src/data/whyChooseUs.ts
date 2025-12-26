@@ -38,8 +38,7 @@ export const whyChooseFeatures: WhyChooseFeature[] = [
   {
     icon: "rocket_launch",
     title: "Rapid Deployment",
-    description:
-      "Production systems delivered in weeks, not months.",
+    description: "Production systems delivered in weeks, not months.",
   },
 ];
 

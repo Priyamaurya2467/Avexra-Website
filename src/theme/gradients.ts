@@ -1,7 +1,6 @@
 export const gradients = {
   // Primary brand gradient (hero text, CTAs)
-  brand:
-    "linear-gradient(90deg, #3B6FE2 0%, #6D28D9 100%)",
+  brand: "linear-gradient(90deg, #3B6FE2 0%, #6D28D9 100%)",
 
   // Soft brand background glow
   brandSoft:
@@ -12,8 +11,7 @@ export const gradients = {
     "radial-gradient(circle at center, rgba(59,111,226,0.25) 0%, transparent 70%)",
 
   // Section highlight gradient
-  section:
-    "linear-gradient(135deg, #1E40AF 0%, #3B6FE2 50%, #6D28D9 100%)",
+  section: "linear-gradient(135deg, #1E40AF 0%, #3B6FE2 50%, #6D28D9 100%)",
 
   // CTA dark overlay (footer / big CTAs)
   ctaDark:

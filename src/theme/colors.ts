@@ -1,9 +1,9 @@
 export const colors = {
   brand: {
-    primary: "#3B6FE2",     // logo blue
-    secondary: "#1E40AF",   // deep blue
-    accent: "#6D28D9",      // violet
-    glow: "#9333EA",        // lavender glow
+    primary: "#3B6FE2", // logo blue
+    secondary: "#1E40AF", // deep blue
+    accent: "#6D28D9", // violet
+    glow: "#9333EA", // lavender glow
   },
 
   surface: {

@@ -62,11 +62,7 @@ export default function Navbar() {
           </Link> */}
 
           <button className="hidden sm:flex items-center justify-center rounded-full h-10 px-6 bg-text-main text-white text-sm font-bold hover:bg-primary transition-all duration-300 shadow-lg shadow-slate-300/50 hover:shadow-indigo-500/30">
-            <Link
-              href="/contact"
-            >
-              Start Building
-            </Link>
+            <Link href="/contact">Start Building</Link>
           </button>
 
           {/* Mobile Menu */}

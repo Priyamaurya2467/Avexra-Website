@@ -10,7 +10,10 @@ export default function WorkflowCanvas() {
             <div className="size-3 rounded-full bg-green-400 border border-green-500/30 hover:bg-green-500 transition-colors shadow-sm"></div>
           </div>
           <div className="flex items-center gap-3 bg-slate-50 px-3 py-1.5 rounded-full border border-slate-200 shadow-inner">
-            <span className="material-symbols-outlined text-slate-400" style={{ fontVariationSettings: "'wght' 400", fontSize: "12px" }}>
+            <span
+              className="material-symbols-outlined text-slate-400"
+              style={{ fontVariationSettings: "'wght' 400", fontSize: "12px" }}
+            >
               lock
             </span>
             <span className="text-xs font-mono text-slate-500">
@@ -34,11 +37,7 @@ export default function WorkflowCanvas() {
                 y1="0%"
                 y2="0%"
               >
-                <stop
-                  offset="0%"
-                  stopColor="#818cf8"
-                  stopOpacity="0.2"
-                ></stop>
+                <stop offset="0%" stopColor="#818cf8" stopOpacity="0.2"></stop>
                 <stop offset="50%" stopColor="#4f46e5" stopOpacity="1"></stop>
                 <stop
                   offset="100%"
@@ -120,7 +119,13 @@ export default function WorkflowCanvas() {
             <div className="px-4 py-3 border-b border-slate-100 flex items-center justify-between bg-slate-50/50 rounded-t-xl">
               <div className="flex items-center gap-2">
                 <div className="p-1 rounded bg-yellow-100">
-                  <span className="material-symbols-outlined text-yellow-600" style={{ fontVariationSettings: "'wght' 400", fontSize: "14px" }}>
+                  <span
+                    className="material-symbols-outlined text-yellow-600"
+                    style={{
+                      fontVariationSettings: "'wght' 400",
+                      fontSize: "14px",
+                    }}
+                  >
                     bolt
                   </span>
                 </div>
@@ -145,7 +150,13 @@ export default function WorkflowCanvas() {
             <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 size-3 bg-white border-2 border-slate-300 rounded-full"></div>
             <div className="px-4 py-3 border-b border-slate-100 flex items-center gap-2 bg-slate-50/50 rounded-t-xl">
               <div className="p-1 rounded bg-blue-100">
-                <span className="material-symbols-outlined text-blue-600" style={{ fontVariationSettings: "'wght' 400", fontSize: "14px" }}>
+                <span
+                  className="material-symbols-outlined text-blue-600"
+                  style={{
+                    fontVariationSettings: "'wght' 400",
+                    fontSize: "14px",
+                  }}
+                >
                   alt_route
                 </span>
               </div>
@@ -158,7 +169,10 @@ export default function WorkflowCanvas() {
                 <span className="text-[10px] text-indigo-700 font-medium">
                   Score &gt; 80
                 </span>
-                <span className="material-symbols-outlined text-indigo-600" style={{ fontSize: "13px" }}>
+                <span
+                  className="material-symbols-outlined text-indigo-600"
+                  style={{ fontSize: "13px" }}
+                >
                   arrow_forward
                 </span>
               </div>
@@ -166,7 +180,10 @@ export default function WorkflowCanvas() {
                 <span className="text-[10px] text-slate-500">
                   Score &lt; 80
                 </span>
-                <span className="material-symbols-outlined text-slate-400" style={{ fontSize: "13px" }}>
+                <span
+                  className="material-symbols-outlined text-slate-400"
+                  style={{ fontSize: "13px" }}
+                >
                   close
                 </span>
               </div>
@@ -178,7 +195,13 @@ export default function WorkflowCanvas() {
             <div className="px-4 py-3 border-b border-indigo-100 flex items-center justify-between bg-gradient-to-r from-indigo-50 to-white rounded-t-xl">
               <div className="flex items-center gap-2">
                 <div className="p-1 rounded bg-indigo-100 text-primary">
-                  <span className="material-symbols-outlined" style={{ fontVariationSettings: "'wght' 400", fontSize: "14px" }}>
+                  <span
+                    className="material-symbols-outlined"
+                    style={{
+                      fontVariationSettings: "'wght' 400",
+                      fontSize: "14px",
+                    }}
+                  >
                     auto_awesome
                   </span>
                 </div>
@@ -211,13 +234,25 @@ export default function WorkflowCanvas() {
               </div>
               <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-[10px] text-slate-400 font-mono">
                 <span className="flex items-center gap-1">
-                  <span className="material-symbols-outlined" style={{ fontVariationSettings: "'wght' 400", fontSize: "10px" }}>
+                  <span
+                    className="material-symbols-outlined"
+                    style={{
+                      fontVariationSettings: "'wght' 400",
+                      fontSize: "10px",
+                    }}
+                  >
                     token
                   </span>
                   420 tokens
                 </span>
                 <span className="flex items-center gap-1">
-                  <span className="material-symbols-outlined" style={{ fontVariationSettings: "'wght' 400", fontSize: "10px" }}>
+                  <span
+                    className="material-symbols-outlined"
+                    style={{
+                      fontVariationSettings: "'wght' 400",
+                      fontSize: "10px",
+                    }}
+                  >
                     timer
                   </span>
                   0.8s
@@ -230,7 +265,13 @@ export default function WorkflowCanvas() {
             <div className="absolute -left-1.5 top-1/2 -translate-y-1/2 size-3 bg-white border-2 border-slate-300 rounded-full"></div>
             <div className="px-4 py-3 border-b border-slate-100 flex items-center gap-2 bg-slate-50/50 rounded-t-xl">
               <div className="p-1 rounded bg-purple-100">
-                <span className="material-symbols-outlined text-purple-600" style={{ fontVariationSettings: "'wght' 400", fontSize: "14px" }}>
+                <span
+                  className="material-symbols-outlined text-purple-600"
+                  style={{
+                    fontVariationSettings: "'wght' 400",
+                    fontSize: "14px",
+                  }}
+                >
                   database
                 </span>
               </div>

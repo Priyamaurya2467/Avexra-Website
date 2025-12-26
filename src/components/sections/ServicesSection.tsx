@@ -1,13 +1,15 @@
 import { services } from "@/data/services";
+import Link from "next/link";
 
 export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="font-sans text-slate-600 antialiased overflow-x-hidden pt-16 min-h-screen flex flex-col selection:bg-primary selection:text-black"
+      className="relative w-full font-sans text-slate-600 antialiased overflow-x-hidden pt-16 min-h-screen flex flex-col"
     >
       {/* background grid */}
-      <div className="fixed inset-0 pointer-events-none grid-bg z-0"></div>
+      {/* <div className="fixed inset-0 pointer-events-none grid-bg z-0"></div> */}
+      {/* <div className="fixed inset-0 grid-bg opacity-100 z-10 pointer-events-none"></div> */}
 
       {/* SERVICES */}
       <section className="flex-grow flex flex-col items-center relative z-10">
@@ -26,7 +28,7 @@ export default function ServicesSection() {
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1]">
               Powering the <br className="hidden md:block" />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-800 to-slate-500">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-800 to-slate-600">
                 Autonomous Enterprise
               </span>
             </h1>
@@ -88,29 +90,31 @@ export default function ServicesSection() {
       </section>
 
       {/* CTA STRIP */}
-      <section className="relative w-full border-t border-slate-200 bg-slate-50 rounded-full max-w-[1150px] mx-auto">
-      {/* <section className="relative w-full border-t border-slate-200 bg-slate-50"> */}
-        
+      <section className="relative w-full border-t border-slate-200 bg-slate-50 rounded-full max-w-[1150px] mx-auto mb-10 z-10">
+        {/* <section className="relative w-full border-t border-slate-200 bg-slate-50"> */}
+
         {/* <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-24"> */}
-          <div className="group relative flex flex-col md:flex-row items-center justify-between gap-10 rounded-3xl bg-white border border-slate-200 p-12 overflow-hidden shadow-lg shadow-slate-200/50">
-            <div className="absolute -right-20 -top-20 w-96 h-96 bg-primary/10 rounded-full blur-[100px] group-hover:bg-primary/20 transition-all duration-700" />
+        <div className="group relative flex flex-col md:flex-row items-center justify-between gap-10 rounded-3xl bg-white border border-slate-200 p-12 overflow-hidden shadow-lg shadow-slate-200/50">
+          <div className="absolute -right-20 -top-20 w-96 h-96 bg-primary/10 rounded-full blur-[100px] group-hover:bg-primary/20 transition-all duration-700" />
 
-            <div className="flex flex-col gap-4 relative z-10 max-w-xl">
-              <h2 className="text-slate-900 text-3xl md:text-4xl font-bold">
-                Ready to automate your enterprise?
-              </h2>
-              <p className="text-slate-500 text-lg">
-                Let&apos;s discuss how our AI solutions can scale your business
-                operations and reduce costs.
-              </p>
-            </div>
+          <div className="flex flex-col gap-4 relative z-10 max-w-xl">
+            <h2 className="text-slate-900 text-3xl md:text-4xl font-bold">
+              Ready to automate your enterprise?
+            </h2>
+            <p className="text-slate-500 text-lg">
+              Let&apos;s discuss how our AI solutions can scale your business
+              operations and reduce costs.
+            </p>
+          </div>
 
-            <div className="relative z-10 flex-shrink-0">
-              <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-white text-base font-bold transition-all shadow-[0_0_20px_rgba(70,19,236,0.3)] hover:shadow-[0_0_30px_rgba(70,19,236,0.5)] hover:-translate-y-1">
+          <div className="relative z-10 flex-shrink-0">
+            <Link href="/contact">
+              <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary text-white text-base font-bold transition-all">
                 Book a Discovery Call
               </button>
-            </div>
+            </Link>
           </div>
+        </div>
         {/* </div> */}
       </section>
     </section>

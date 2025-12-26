@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --brand-primary: #3B6FE2;
-  --brand-secondary: #1E40AF;
-  --brand-accent: #6D28D9;
-  --brand-glow: #9333EA;
+  --brand-primary: #3b6fe2;
+  --brand-secondary: #1e40af;
+  --brand-accent: #6d28d9;
+  --brand-glow: #9333ea;
 
   --surface-bg: #f8fafc;
   --surface-main: #ffffff;
@@ -63,8 +63,7 @@ html {
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(32px);
-  transition:
-    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal-visible {
@@ -124,12 +123,12 @@ html {
   border: 1px solid rgba(0, 0, 0, 0.05);
   color: #475569;
 }
-.service-card:hover .icon-container {
+/* .service-card:hover .icon-container {
   background: rgba(70, 19, 236, 0.15);
-  color: #16a34a;
+  color: #1661a3;
   transform: scale(1.1);
   border-color: rgba(70, 19, 236, 0.2);
-}
+} */
 .fade-in-up {
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
@@ -154,28 +153,27 @@ html {
   animation-delay: 0.3s;
 }
 #services {
-  background-color: #ffffff;
   background-image: radial-gradient(
       circle at 50% 0%,
-      #f0fdf4 0%,
+      #f0fafd 0%,
       transparent 40%
     ),
-    radial-gradient(circle at 80% 50%, #ecfccb 0%, transparent 30%);
+    radial-gradient(circle at 80% 50%, #d6edff 0%, transparent 30%);
   background-attachment: fixed;
   color: #0f172a;
 }
-.grid-bg {
+/* .grid-bg {
   background-size: 40px 40px;
   background-image: linear-gradient(to right, #ebf1f7 1px, transparent 1px),
     linear-gradient(to bottom, #ebf1f7 1px, transparent 1px);
   mask-image: radial-gradient(circle at center, black, transparent 80%);
   -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
-}
+} */
 .glass-card {
-  background: rgba(255, 255, 255, 0.60);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 20px 40px -10px rgba(79, 70, 229, 0.05);
+  box-shadow: 0 20px 40px -10px rgba(79, 70, 229, 0.05);
 }
 .glass-card:hover {
   background: rgba(255, 255, 255, 0.95);
