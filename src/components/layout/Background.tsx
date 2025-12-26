@@ -7,7 +7,7 @@ export default function Background() {
       {/* Glow blobs */}
       <div className="absolute top-[-20%] left-[-10%] w-[60vw] h-[60vw] bg-indigo-200/30 rounded-full blur-[120px] animate-pulse-slow" />
       <div className="absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] bg-blue-200/40 rounded-full blur-[150px] animate-float" />
-      <div className="absolute bottom-[-10%] left-[20%] w-[40vw] h-[40vw] bg-violet-200/40 rounded-full blur-[130px] animate-float-delayed" />
+      <div className="absolute bottom-[-10%] left-[20%] w-[40vw] h-[40vw] bg-violet-200/50 rounded-full blur-[130px] animate-float-delayed" />
 
       {/* White fade */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/90" />
