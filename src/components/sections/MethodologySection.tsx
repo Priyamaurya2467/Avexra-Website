@@ -39,7 +39,7 @@ export default function MethodologySection() {
           <div className="max-w-[1280px] mx-auto">
             <div className="hidden lg:grid grid-cols-4 gap-8 relative py-10">
               <div className="absolute top-1/2 left-0 w-full h-[2px] bg-slate-200 rounded-full bg-border-light -translate-y-1/2 z-0"></div>
-              <div className="absolute top-1/2 left-0 w-[100%] h-[2px] bg-gradient-to-r from-transparent via-primary to-primary -translate-y-1/2 z-0 shadow-[0_0_10px_rgba(112,128,144,0.5)]"></div>
+              <div className="absolute top-1/2 left-0 w-[100%] h-[2px] bg-gradient-to-r from-transparent via-primary to-background-light -translate-y-1/2 z-0 shadow-[0_0_10px_rgba(112,128,144,0.5)]"></div>
 
               {methodologySteps.map((step, index) => {
                 const isTop = index % 2 === 0;
