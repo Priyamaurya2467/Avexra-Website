@@ -41,8 +41,8 @@ export default function Footer() {
               />
               <ContactItem
                 icon="location"
-                text="San Francisco, CA, USA"
-                href="https://maps.google.com/?q=San+Francisco+CA"
+                text="Gurugram, Haryana, India"
+                href="https://maps.google.com/?q=Gurugram+Haryana+India"
               />
             </div>
           </div>
