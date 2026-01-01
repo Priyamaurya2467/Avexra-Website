@@ -6,13 +6,13 @@ import WorkflowCanvas from "./WorkflowCanvas";
 export default function Hero() {
   return (
     <main className="relative z-10 flex flex-col items-center">
-      <section className="relative w-full pt-40 pb-20 lg:pt-45 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto min-h-screen flex items-center">
+      <section className="relative w-full pt-40 pb-20 lg:pt-40 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto min-h-screen flex items-center">
         <Background />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center w-full">
           {/* Left Content */}
           <div className="lg:col-span-5 flex flex-col gap-8 text-center lg:text-left z-20">
-            <div className="flex justify-center lg:justify-start reveal">
+            {/* <div className="flex justify-center lg:justify-start reveal">
               <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-indigo-100 hover:border-indigo-300 transition-all cursor-default group shadow-sm shadow-indigo-100">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
@@ -33,7 +33,7 @@ export default function Hero() {
                   arrow_forward
                 </span>
               </div>
-            </div>
+            </div> */}
 
             <div className="space-y-6 reveal delay-100">
               <h1 className="text-5xl sm:text-6xl xl:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1]">

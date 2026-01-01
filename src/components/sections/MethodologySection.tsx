@@ -11,7 +11,7 @@ export default function MethodologySection() {
         <section className="w-full max-w-[1280px] px-4 md:px-10 pt-20 pb-12 flex flex-col items-center text-center relative overflow-hidden z-10">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[100px] -z-10" />
 
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 shadow-sm mb-6 backdrop-blur-sm">
+          {/* <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 shadow-sm mb-6 backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
@@ -19,7 +19,7 @@ export default function MethodologySection() {
             <span className="text-xs font-semibold uppercase tracking-wide text-primary">
               Workflow
             </span>
-          </div>
+          </div> */}
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6 max-w-4xl leading-[1.1]">
             From Audit to{" "}

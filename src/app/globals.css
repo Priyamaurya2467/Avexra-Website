@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --brand-primary: #3b6fe2;
   --brand-secondary: #1e40af;
   --brand-accent: #6d28d9;
@@ -17,6 +17,26 @@
   --text-muted: #64748b;
 
   --border-subtle: #e2e8f0;
+} */
+:root {
+  /* ===== Brand (photo-matched SaaS blue) ===== */
+  --brand-primary: #0f295c;        /* main blue (heading highlight) */
+  --brand-secondary: #1f3f8b;      /* darker support blue */
+  --brand-accent: #4b6fdc;         /* subtle accent */
+  --brand-glow: rgba(47, 95, 191, 0.25);
+
+  /* ===== Surfaces (warm off-white like photo) ===== */
+  --surface-bg: #f6f7f4;           /* page background */
+  --surface-main: #fbfbf9;         /* cards */
+  --surface-muted: #f0f1ee;        /* sections */
+
+  /* ===== Text (soft contrast, no eye strain) ===== */
+  --text-primary: #1f2933;         /* headings */
+  --text-secondary: #4b5563;       /* body text */
+  --text-muted: #6b7280;           /* muted text */
+
+  /* ===== Borders ===== */
+  --border-subtle: #e3e6ea;
 }
 
 .glass-panel {
@@ -123,12 +143,6 @@ html {
   border: 1px solid rgba(0, 0, 0, 0.05);
   color: #475569;
 }
-/* .service-card:hover .icon-container {
-  background: rgba(70, 19, 236, 0.15);
-  color: #1661a3;
-  transform: scale(1.1);
-  border-color: rgba(70, 19, 236, 0.2);
-} */
 .fade-in-up {
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
@@ -162,13 +176,6 @@ html {
   background-attachment: fixed;
   color: #0f172a;
 }
-/* .grid-bg {
-  background-size: 40px 40px;
-  background-image: linear-gradient(to right, #ebf1f7 1px, transparent 1px),
-    linear-gradient(to bottom, #ebf1f7 1px, transparent 1px);
-  mask-image: radial-gradient(circle at center, black, transparent 80%);
-  -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
-} */
 .glass-card {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
@@ -212,3 +219,11 @@ html {
 .social-icon {
   @apply text-slate-400 hover:text-primary transition-colors;
 }
+
+/* .grid-bg {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, #ebf1f7 1px, transparent 1px),
+    linear-gradient(to bottom, #ebf1f7 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+} */

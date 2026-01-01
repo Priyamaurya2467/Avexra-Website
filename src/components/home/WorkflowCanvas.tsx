@@ -2,7 +2,9 @@ export default function WorkflowCanvas() {
   return (
     <div className="lg:col-span-7 relative w-full h-[600px] lg:h-[800px] perspective-1000 reveal delay-200">
       <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-blue-500/20 blur-[80px] rounded-full transform scale-90 z-0"></div>
+
       <div className="relative z-10 w-full h-full bg-white/60 backdrop-blur-xl rounded-3xl border border-white/60 shadow-2xl shadow-indigo-200/50 overflow-hidden flex flex-col group transform transition-transform duration-700 hover:rotate-y-1 hover:rotate-x-1">
+        {/* WINDOW BAR */}
         <div className="h-14 border-b border-slate-200 bg-white/80 flex items-center px-6 justify-between shrink-0">
           <div className="flex gap-2">
             <div className="size-3 rounded-full bg-red-400 border border-red-500/30 hover:bg-red-500 transition-colors shadow-sm"></div>
@@ -14,22 +16,25 @@ export default function WorkflowCanvas() {
               className="material-symbols-outlined text-slate-400"
               style={{ fontVariationSettings: "'wght' 400", fontSize: "12px" }}
             >
-              lock
+            lock
             </span>
             <span className="text-xs font-mono text-slate-500">
-              avexra.ai/workflow/agent-v1
+              avexra.ai/dashboard
             </span>
           </div>
           <div className="flex gap-4">
             <div className="h-1.5 w-20 bg-slate-200 rounded-full"></div>
-          </div>
-        </div>
-        <div className="relative flex-1 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] overflow-hidden cursor-grab active:cursor-grabbing">
+          </div>        </div>
+
+        {/* CANVAS */}
+        <div className="relative flex-1 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] overflow-hidden">
+          {/* SVG CONNECTIONS */}
           <svg
             className="absolute inset-0 w-full h-full pointer-events-none z-0"
             overflow="visible"
           >
-            <defs>
+            <defs
+            >
               <linearGradient
                 id="flow-gradient"
                 x1="0%"
@@ -57,14 +62,14 @@ export default function WorkflowCanvas() {
               </filter>
             </defs>
             <path
-              d="M220 180 C 220 280, 220 280, 220 350"
+              d="M155 309 C 160 330, 200 400, 250 400"
               fill="none"
               stroke="#cbd5e1"
               strokeWidth="2"
             ></path>
             <path
               className="animate-[flow_3s_linear_infinite]"
-              d="M220 180 C 220 280, 220 280, 220 350"
+              d="M155 309 C 160 330, 200 400, 250 400"
               fill="none"
               filter="url(#glow-line)"
               stroke="url(#flow-gradient)"
@@ -72,32 +77,32 @@ export default function WorkflowCanvas() {
               strokeWidth="2"
             ></path>
             <path
-              d="M300 400 C 400 400, 400 240, 480 240"
-              fill="none"
-              stroke="#cbd5e1"
-              strokeWidth="2"
-            ></path>
-            <path
-              className="animate-[flow_2s_linear_infinite]"
-              d="M300 400 C 400 400, 400 240, 480 240"
-              fill="none"
-              filter="url(#glow-line)"
-              stroke="url(#flow-gradient)"
-              strokeDasharray="8 8"
-              strokeWidth="2"
-            ></path>
-            <path
-              d="M300 400 C 400 400, 400 550, 480 550"
+              d="M390 534 C 452 450, 450 452, 493 350"
               fill="none"
               stroke="#cbd5e1"
               strokeWidth="2"
             ></path>
             <path
               className="animate-[flow_4s_linear_infinite]"
-              d="M300 400 C 400 400, 400 550, 480 550"
+              d="M390 534 C 452 450, 450 452, 493 350"
               fill="none"
+              filter="url(#glow-line)"
               stroke="url(#flow-gradient)"
               strokeDasharray="12 12"
+              strokeWidth="2"
+            ></path>
+            <path
+              d="M390 534 C 410 548, 410 548, 430 550"
+              fill="none"
+              stroke="#cbd5e1"
+              strokeWidth="2"
+            ></path>
+            <path
+              className="animate-[flow_2s_linear_infinite]"
+              d="M390 534 C 410 548, 410 548, 430 550"
+              fill="none"
+              stroke="url(#flow-gradient)"
+              strokeDasharray="8 8"
               strokeWidth="2"
             ></path>
             <path
@@ -106,197 +111,308 @@ export default function WorkflowCanvas() {
               stroke="#cbd5e1"
               strokeWidth="2"
             ></path>
-            <circle
+            {/* <circle
               className="animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite]"
-              cx="720"
-              cy="395"
+              cx="680"
+              cy="240"
               fill="#4f46e5"
               opacity="0.5"
               r="4"
-            ></circle>
+            ></circle> */}
           </svg>
-          <div className="absolute top-[100px] left-[120px] node-card rounded-xl w-52 p-0 z-10 animate-float bg-white">
-            <div className="px-4 py-3 border-b border-slate-100 flex items-center justify-between bg-slate-50/50 rounded-t-xl">
-              <div className="flex items-center gap-2">
-                <div className="p-1 rounded bg-yellow-100">
-                  <span
-                    className="material-symbols-outlined text-yellow-600"
-                    style={{
-                      fontVariationSettings: "'wght' 400",
-                      fontSize: "14px",
-                    }}
-                  >
-                    bolt
-                  </span>
-                </div>
-                <span className="text-xs font-bold text-slate-700">
-                  Webhook Trigger
-                </span>
-              </div>
-              <div className="size-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_#22c55e]"></div>
-            </div>
-            <div className="p-4 space-y-2">
-              <div className="flex items-center gap-2 text-[10px] text-slate-500 font-mono">
-                <span>Status:</span>
-                <span className="text-green-600 font-bold">Listening...</span>
-              </div>
-              <div className="text-[10px] font-mono text-slate-500 bg-slate-100 p-2 rounded border border-slate-200 truncate shadow-inner">
-                POST /v1/leads/capture
-              </div>
-            </div>
-            <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 size-3 bg-white border-2 border-primary rounded-full hover:bg-primary transition-colors cursor-pointer shadow-sm"></div>
-          </div>
-          <div className="absolute top-[350px] left-[120px] node-card rounded-xl w-52 p-0 z-10 animate-float-delayed bg-white">
-            <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 size-3 bg-white border-2 border-slate-300 rounded-full"></div>
-            <div className="px-4 py-3 border-b border-slate-100 flex items-center gap-2 bg-slate-50/50 rounded-t-xl">
-              <div className="p-1 rounded bg-blue-100">
-                <span
-                  className="material-symbols-outlined text-blue-600"
-                  style={{
-                    fontVariationSettings: "'wght' 400",
-                    fontSize: "14px",
-                  }}
-                >
-                  alt_route
-                </span>
-              </div>
-              <span className="text-xs font-bold text-slate-700">
-                Lead Router
+
+          {/* 1️⃣ SELECT DATA SOURCE */}
+          <div className="absolute top-[80px] left-[80px] node-card rounded-xl w-[150px] p-0 z-10 animate-float-delayed bg-white shadow-lg">
+            <div className="p-3 border-b border-slate-100">
+              <span className="text-xs font-bold text-slate-800">
+                Select Data Source
               </span>
             </div>
-            <div className="p-4 space-y-2">
-              <div className="flex justify-between items-center bg-indigo-50 p-2 rounded border border-indigo-100">
-                <span className="text-[10px] text-indigo-700 font-medium">
-                  Score &gt; 80
-                </span>
-                <span
-                  className="material-symbols-outlined text-indigo-600"
-                  style={{ fontSize: "13px" }}
-                >
-                  arrow_forward
+
+            <div className="p-3 grid grid-cols-2 gap-2">
+              <div className="aspect-square bg-blue-50/50 border border-blue-150 rounded-lg flex items-center justify-center hover:bg-blue-50 transition-colors cursor-pointer group">
+                <span className="material-symbols-outlined text-blue-500 group-hover:scale-110 transition-transform"                    style={{
+                      fontVariationSettings: "'wght' 400",
+                    }}>
+                  cloud
                 </span>
               </div>
-              <div className="flex justify-between items-center bg-slate-50 p-2 rounded border border-slate-100 opacity-60">
-                <span className="text-[10px] text-slate-500">
-                  Score &lt; 80
+
+              <div className="aspect-square bg-white border-2 border-primary/40 rounded-lg flex items-center justify-center shadow-inner relative">
+                <span className="material-symbols-outlined text-slate-700"                    style={{
+                      fontVariationSettings: "'wght' 400",
+                    }}>
+                  database
                 </span>
-                <span
-                  className="material-symbols-outlined text-slate-400"
-                  style={{ fontSize: "13px" }}
-                >
-                  close
+                <div className="absolute -top-1 -right-1 size-3 bg-primary rounded-full border-2 border-white flex items-center justify-center">
+                  {/* <span className="material-symbols-outlined text-[3px] text-black">
+                    check
+                  </span> */}
+                </div>
+              </div>
+
+              <div className="aspect-square bg-slate-50 border border-slate-100 rounded-lg flex items-center justify-center hover:bg-slate-100 transition-colors cursor-pointer">
+                <span className="material-symbols-outlined text-slate-400"
+                style={{
+                      fontVariationSettings: "'wght' 400",
+                    }}>
+                  api
+                </span>
+              </div>
+
+              <div className="aspect-square bg-slate-50 border border-slate-100 rounded-lg flex items-center justify-center hover:bg-slate-100 transition-colors cursor-pointer">
+                <span className="material-symbols-outlined text-slate-400"
+                style={{
+                      fontVariationSettings: "'wght' 400",
+                    }}>
+                  folder
                 </span>
               </div>
             </div>
-            <div className="absolute -right-1.5 top-1/2 -translate-y-1/2 size-3 bg-white border-2 border-primary rounded-full hover:bg-primary transition-colors cursor-pointer shadow-sm"></div>
+
+            <div className="p-2 border-t border-slate-100">
+              <div className="bg-primary/10 rounded px-2 py-1 flex items-center gap-2">
+                <span className="text-[9px] font-mono text-slate-600 truncate">
+                  Customer_Sales_Data_Q2
+                </span>
+              </div>
+            </div>
+                            <div className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 size-3 bg-white border-2 border-primary rounded-full z-30"></div>
           </div>
-          <div className="absolute top-[160px] right-[40px] lg:right-[60px] node-card rounded-xl w-72 p-0 z-20 border-primary/30 shadow-[0_10px_40px_-10px_rgba(79,70,229,0.2)] ring-1 ring-primary/10 animate-float bg-white">
-            <div className="absolute -left-1.5 top-1/2 -translate-y-1/2 size-3 bg-primary border-2 border-white rounded-full shadow-[0_0_15px_rgba(79,70,229,0.5)] z-30"></div>
-            <div className="px-4 py-3 border-b border-indigo-100 flex items-center justify-between bg-gradient-to-r from-indigo-50 to-white rounded-t-xl">
+
+          {/* 2️⃣ AVEXRA ASSISTANT CHAT */}
+          <div className="absolute bottom-[50px] left-[50px] node-card rounded-xl w-[340px] p-0 z-20 animate-float bg-white shadow-float-card">
+            <div className="px-4 py-3 border-b border-slate-100 flex items-center justify-between bg-white/50 rounded-t-xl">
               <div className="flex items-center gap-2">
-                <div className="p-1 rounded bg-indigo-100 text-primary">
-                  <span
-                    className="material-symbols-outlined"
+                <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                <span className="text-xs font-bold text-slate-800">
+                  Avexra Assistant
+                </span>
+                <span className="text-[10px] text-slate-400 bg-slate-100 px-1.5 py-0.5 rounded">
+                  APP
+                </span>
+              </div>
+              <span className="text-[10px] text-slate-400 font-mono">
+                Just now
+              </span>
+            </div>
+            <div className="p-4 space-y-4">
+              <div className="flex gap-3">
+                <div className="size-7 rounded-full bg-slate-900 shrink-0 flex items-center justify-center text-white text-[10px] font-bold">
+                  U
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs font-bold text-slate-900">
+                      User
+                    </span>
+                    <span className="text-[10px] text-slate-400">9:41 AM</span>
+                  </div>
+                  <p className="text-[11px] leading-relaxed text-slate-600">
+                    Hey Avexra, can you show me last quarter&apos;s sales by region?
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <div className="size-7 rounded-full bg-primary/20 shrink-0 flex items-center justify-center text-black font-bold">
+                  <span className="material-symbols-outlined"
                     style={{
                       fontVariationSettings: "'wght' 400",
                       fontSize: "14px",
                     }}
+                    >
+                    smart_toy
+                  </span>
+                </div>
+                <div className="w-full">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs font-bold text-slate-900">
+                      Avexra AI
+                    </span>
+                    <span className="text-[10px] text-slate-400">9:41 AM</span>
+                  </div>
+                  <p className="text-[11px] leading-relaxed text-slate-600 mb-2">
+                    Here&apos;s the breakdown of Q2 sales by region:
+                  </p>
+                  <ul className="text-[11px] text-slate-500 space-y-1 pl-1 mb-2 border-l-2 border-slate-100">
+                    <li>
+                      • North America:{" "}
+                      <span className="font-medium text-slate-800">$3.2M</span>
+                    </li>
+                    <li>
+                      • Europe:{" "}
+                      <span className="font-medium text-slate-800">$2.1M</span>
+                    </li>
+                    <li>
+                      • Asia-Pacific:{" "}
+                      <span className="font-medium text-slate-800">$1.7M</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="p-3 border-t border-slate-100 bg-slate-50/50 rounded-b-xl flex items-center gap-2">
+              <span className="material-symbols-outlined text-slate-400" style={{fontVariationSettings: "'wght' 400",fontSize: "16px",}}>
+                add_circle
+              </span>
+              <div className="h-1.5 w-1/3 bg-slate-200 rounded-full"></div>
+              <span className="material-symbols-outlined text-slate-400 ml-auto"
+                    style={{
+                      fontVariationSettings: "'wght' 400",
+                      fontSize: "16px",
+                    }}                >
+                send
+              </span>
+            </div>
+            <div className="absolute top-[-6px] left-1/2 -translate-x-1/2 size-3 bg-white border-2 border-primary rounded-full z-30"></div>
+            <div className="absolute top-1/2 -right-1.5 -translate-y-1/2 size-3 bg-white border-2 border-primary rounded-full z-30"></div>
+          </div>
+
+          {/* 3️⃣ REVENUE ANALYTICS */}
+          <div className="absolute top-[50px] right-[50px] node-card rounded-xl w-[400px] p-0 z-15 animate-float bg-white shadow-2xl border-t-4 border-t-primary">
+            <div className="px-5 py-4 border-b border-slate-100 flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <div className="p-1.5 bg-primary/20 rounded-md">
+                  <span className="material-symbols-outlined text-base"
+                    style={{
+                      fontVariationSettings: "'wght' 300",
+                    }}>
+                    analytics
+                  </span>
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-slate-800">
+                    Revenue Analytics
+                  </h3>
+                  <p className="text-[10px] text-slate-400 font-medium">
+                    Real-time Generation
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-1">
+                <span className="size-2 rounded-full bg-slate-200"></span>
+                <span className="size-2 rounded-full bg-slate-200"></span>
+              </div>
+            </div>
+            <div className="p-5 relative h-[220px]">
+              <div className="absolute inset-x-5 inset-y-5 flex flex-col justify-between pointer-events-none">
+                <div className="w-full h-px bg-slate-50"></div>
+                <div className="w-full h-px bg-slate-50"></div>
+                <div className="w-full h-px bg-slate-50"></div>
+                <div className="w-full h-px bg-slate-50"></div>
+                <div className="w-full h-px bg-slate-50"></div>
+              </div>
+              <svg
+                className="w-full h-full overflow-visible"
+                preserveAspectRatio="none"
+                viewBox="0 0 100 50"
+              >
+                <defs>
+                  <linearGradient
+                    id="chartGradient"
+                    x1="0"
+                    x2="0"
+                    y1="0"
+                    y2="1"
                   >
+                    <stop
+                      offset="0%"
+                      stopColor="#f9f506"
+                      stopOpacity="0.3"
+                    ></stop>
+                    <stop
+                      offset="100%"
+                      stopColor="#f9f506"
+                      stopOpacity="0"
+                    ></stop>
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M0,50 L0,35 L10,30 L20,38 L30,25 L40,28 L50,15 L60,20 L70,10 L80,18 L90,5 L100,12 L100,50 Z"
+                  fill="url(#chartGradient)"
+                ></path>
+                <path
+                  d="M0,35 L10,30 L20,38 L30,25 L40,28 L50,15 L60,20 L70,10 L80,18 L90,5 L100,12"
+                  fill="none"
+                  stroke="#e0dc05"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="0.8"
+                ></path>
+                <circle
+                  cx="70"
+                  cy="10"
+                  fill="white"
+                  r="1.5"
+                  stroke="#e0dc05"
+                  strokeWidth="0.5"
+                ></circle>
+                <line
+                  stroke="#e0dc05"
+                  strokeDasharray="1 1"
+                  strokeWidth="0.2"
+                  x1="70"
+                  x2="70"
+                  y1="10"
+                  y2="50"
+                ></line>
+              </svg>
+              <div className="absolute top-[20px] right-[25%] bg-white p-2 rounded shadow-lg border border-slate-100 z-10 animate-float-delayed">
+                <span className="block text-[9px] text-slate-400 uppercase">
+                  Q2 Peak
+                </span>
+                <span className="block text-sm font-bold text-slate-800">
+                  $124,500
+                </span>
+              </div>
+            </div>
+            <div className="px-5 pb-4 flex justify-between text-[10px] text-slate-400 font-mono uppercase">
+              <span>Apr 01</span>
+              <span>May 15</span>
+              <span>Jun 30</span>
+            </div>
+            <div className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 size-3 bg-white border-2 border-primary rounded-full z-30"></div>
+          </div>
+
+          {/* 4️⃣ AI INSIGHT GENERATED */}
+          <div className="absolute bottom-[130px] right-[50px] z-20 animate-float-delayed">
+            <div className="bg-white/90 backdrop-blur border border-primary/30 rounded-lg p-3 shadow-xl max-w-[260px]">
+              <div className="flex items-start gap-3">
+                <div className="mt-0.5 p-1.5 bg-primary/20 rounded-md text-black shadow-sm">
+                  <span className="material-symbols-outlined text-base"
+                                      style={{
+                      fontVariationSettings: "'wght' 350",
+                    }}
+                >
                     auto_awesome
                   </span>
                 </div>
-                <span className="text-sm font-bold text-slate-800">
-                  GPT-4 Analyst
-                </span>
-              </div>
-              <span className="text-[9px] font-bold bg-primary text-white px-2 py-0.5 rounded-full uppercase tracking-wide shadow-sm">
-                Agentic
-              </span>
-            </div>
-            <div className="p-5 space-y-4 bg-white/95">
-              <div className="space-y-1.5">
-                <span className="text-[10px] text-primary uppercase tracking-wider font-bold opacity-80">
-                  Instruction
-                </span>
-                <p className="text-xs text-slate-600 leading-snug font-medium">
-                  Analyze prospect intent from unstructured data and generate
-                  personalized outreach strategy.
-                </p>
-              </div>
-              <div className="space-y-2">
-                <div className="flex justify-between text-[10px] text-slate-500 font-medium">
-                  <span>Processing...</span>
-                  <span>78%</span>
+                <div>
+                  <h4 className="text-xs font-bold text-slate-800 mb-1">
+                    AI Insight Generated
+                  </h4>
+                  <p className="text-[10px] text-slate-600 leading-snug">
+                    Q3 projection indicates a{" "}
+                    <span className="font-bold text-green-600">
+                      +18% growth
+                    </span>{" "}
+                    based on current pipeline velocity.
+                  </p>
+                  <div className="mt-2 flex gap-2">
+                    <button className="px-2 py-1 bg-slate-100 rounded text-[9px] font-medium text-slate-600 hover:bg-slate-200">
+                      View Details
+                    </button>
+                    <button className="px-2 py-1 bg-primary/20 text-black rounded text-[9px] font-bold hover:bg-primary-dim">
+                      Apply Forecast
+                    </button>
+                  </div>
                 </div>
-                <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden shadow-inner">
-                  <div className="h-full w-4/5 bg-gradient-to-r from-primary to-indigo-400 animate-[shine_1.5s_infinite] rounded-full"></div>
-                </div>
-              </div>
-              <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-[10px] text-slate-400 font-mono">
-                <span className="flex items-center gap-1">
-                  <span
-                    className="material-symbols-outlined"
-                    style={{
-                      fontVariationSettings: "'wght' 400",
-                      fontSize: "10px",
-                    }}
-                  >
-                    token
-                  </span>
-                  420 tokens
-                </span>
-                <span className="flex items-center gap-1">
-                  <span
-                    className="material-symbols-outlined"
-                    style={{
-                      fontVariationSettings: "'wght' 400",
-                      fontSize: "10px",
-                    }}
-                  >
-                    timer
-                  </span>
-                  0.8s
-                </span>
-              </div>
-            </div>
-            <div className="absolute -right-1.5 top-1/2 -translate-y-1/2 size-3 bg-primary border-2 border-white rounded-full shadow-[0_0_15px_rgba(79,70,229,0.5)] hover:scale-125 transition-transform cursor-pointer"></div>
-          </div>
-          <div className="absolute bottom-[140px] right-[60px] lg:right-[100px] node-card rounded-xl w-52 p-0 z-10 animate-float-delayed bg-white">
-            <div className="absolute -left-1.5 top-1/2 -translate-y-1/2 size-3 bg-white border-2 border-slate-300 rounded-full"></div>
-            <div className="px-4 py-3 border-b border-slate-100 flex items-center gap-2 bg-slate-50/50 rounded-t-xl">
-              <div className="p-1 rounded bg-purple-100">
-                <span
-                  className="material-symbols-outlined text-purple-600"
-                  style={{
-                    fontVariationSettings: "'wght' 400",
-                    fontSize: "14px",
-                  }}
-                >
-                  database
-                </span>
-              </div>
-              <span className="text-xs font-bold text-slate-700">
-                Postgres Insert
-              </span>
-            </div>
-            <div className="p-4">
-              <div className="space-y-2">
-                <div className="flex gap-2">
-                  <div className="h-2 bg-slate-200 rounded w-8 animate-pulse"></div>
-                  <div className="h-2 bg-slate-100 rounded w-full animate-pulse delay-75"></div>
-                </div>
-                <div className="flex gap-2">
-                  <div className="h-2 bg-slate-200 rounded w-8 animate-pulse delay-100"></div>
-                  <div className="h-2 bg-slate-100 rounded w-2/3 animate-pulse delay-150"></div>
-                </div>
-                <div className="flex gap-2">
-                  <div className="h-2 bg-slate-200 rounded w-8 animate-pulse delay-200"></div>
-                  <div className="h-2 bg-slate-100 rounded w-3/4 animate-pulse delay-300"></div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="absolute bottom-6 left-6 bg-white/90 border border-slate-200 rounded-lg px-4 py-2.5 flex items-center gap-3 shadow-lg shadow-indigo-100/50 backdrop-blur-md z-30">
+
+          {/* STATUS */}
+          <div className="absolute bottom-6 right-6 bg-white/90 border border-slate-200 rounded-lg px-4 py-2.5 flex items-center gap-3 shadow-lg shadow-indigo-100/50 backdrop-blur-md z-30">
             <div className="flex size-2 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full size-2 bg-green-500"></span>

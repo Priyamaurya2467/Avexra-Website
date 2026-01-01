@@ -25,7 +25,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className="bg-background-light text-text-main font-sans antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+      <body className="bg-background-light text-text-main font-sans antialiased selection:bg-primary selection:text-white overflow-x-visible">
         {children}
       </body>
     </html>

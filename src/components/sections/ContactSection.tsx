@@ -7,7 +7,7 @@ export default function ContactSection() {
       className="relative w-full pt-28 pb-20 lg:pt-36 overflow-hidden z-10"
     >
       <div className="max-w-[1100px] mx-auto">
-        <div className="relative rounded-[2.5rem] bg-gradient-to-b from-white to-slate-50 border border-slate-200 overflow-hidden p-8 md:p-12 lg:p-16 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)]">
+        <div className="relative rounded-[2.5rem] bg-gradient-to-b from-white to-slate-50 border border-slate-200 overflow-hidden p-8 md:p-12 lg:p-16 shadow-[0_20px_30px_-15px_rgba(0,0,0,0.05)]">
           {/* background glows */}
           <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-primary/10 rounded-full blur-[80px] pointer-events-none opacity-60" />
           <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-500/5 rounded-full blur-[80px] pointer-events-none opacity-60" />
@@ -77,7 +77,7 @@ export default function ContactSection() {
             </div>
 
             {/* RIGHT FORM */}
-            <div className="bg-white border border-slate-100 rounded-[2rem] p-6 md:p-8 shadow-[0_8px_40px_rgba(0,0,0,0.08)] relative overflow-hidden">
+            <div className="bg-white border border-slate-100 rounded-[2rem] p-6 md:p-8 shadow-[0_8px_20px_rgba(0,0,0,0.08)] relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-slate-50/50 to-transparent pointer-events-none" />
 
               <form className="flex flex-col gap-5 relative z-10">

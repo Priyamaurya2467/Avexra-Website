@@ -16,15 +16,15 @@ export default function ServicesSection() {
         <div className="w-full max-w-[1280px] px-4 sm:px-6 lg:px-8 py-20 md:py-22">
           {/* HEADER */}
           <div className="flex flex-col items-center text-center gap-6 mb-24 max-w-4xl mx-auto fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm">
+            {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm">
               <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-70" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
               </span>
               <span className="text-xs font-semibold text-primary tracking-wide uppercase">
                 AI Consulting & Development
               </span>
-            </div>
+            </div> */}
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1]">
               Powering the <br className="hidden md:block" />
