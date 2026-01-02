@@ -74,10 +74,10 @@ export default function Hero() {
                 className="group relative flex items-center justify-center h-14 px-8 rounded-full bg-primary text-white font-bold text-lg overflow-hidden transition-all duration-300 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-105 w-full sm:w-auto"
               >
                 <div className="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-shine skew-x-12" />
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="relative z-10 flex items-center gap-2 whitespace-nowrap">
                   Talk to Experts
                   <span
-                    className="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                    className="material-symbols-outlined relative z-10 group-hover:translate-x-1 transition-transform"
                     style={{
                       fontVariationSettings: "'wght' 400",
                       fontSize: "sm",
@@ -88,7 +88,7 @@ export default function Hero() {
                 </span>
               </Link>
 
-              <button className="group flex items-center justify-center h-14 px-8 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 w-full sm:w-auto shadow-sm hover:shadow-md">
+              <button className="group flex items-center justify-center h-14 px-8 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 w-full sm:w-auto shadow-sm hover:shadow-md whitespace-nowrap">
                 <span
                   className="material-symbols-outlined mr-2 text-slate-400 group-hover:text-primary transition-colors"
                   style={{
@@ -180,7 +180,7 @@ export default function Hero() {
             <WorkflowCanvas />
           </div> */}
 
-          <div className="lg:col-span-7 relative w-full h-[600px] lg:h-[800px] flex items-center justify-center lg:justify-end">
+          <div className="lg:col-span-7 relative w-full h-[500px] lg:h-[700px] flex items-center justify-center lg:justify-end">
             {/* Glow background */}
             <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-yellow-100/30 to-amber-100/20 blur-[100px] rounded-full z-0 pointer-events-none overflow-hidden" />
 
