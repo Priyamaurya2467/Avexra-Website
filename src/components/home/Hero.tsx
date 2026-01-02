@@ -1,17 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import Background from "../layout/Background";
-import WorkflowCanvas from "./WorkflowCanvas";
+// import WorkflowCanvas from "./WorkflowCanvas";
 
 export default function Hero() {
   return (
     <main className="relative z-10 flex flex-col items-center">
-      <section className="relative w-full pt-40 pb-20 lg:pt-40 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto min-h-screen flex items-center">
+      <section className="relative w-full pt-40 pb-20 lg:pt-40  max-w-[1400px] mx-auto min-h-screen flex items-center">
         <Background />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center w-full">
           {/* Left Content */}
-          <div className="lg:col-span-5 flex flex-col gap-8 text-center lg:text-left z-20">
+          <div className="lg:col-span-5 flex flex-col gap-8 text-center lg:text-left z-20 px-4 sm:px-6 lg:pl-8">
             {/* <div className="flex justify-center lg:justify-start reveal">
               <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-indigo-100 hover:border-indigo-300 transition-all cursor-default group shadow-sm shadow-indigo-100">
                 <span className="relative flex h-2 w-2">
@@ -68,12 +69,15 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center reveal delay-200">
-              <button className="group relative flex items-center justify-center h-14 px-8 rounded-full bg-primary text-white font-bold text-lg overflow-hidden transition-all duration-300 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-105 w-full sm:w-auto">
+              <Link
+                href="/contact"
+                className="group relative flex items-center justify-center h-14 px-8 rounded-full bg-primary text-white font-bold text-lg overflow-hidden transition-all duration-300 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-105 w-full sm:w-auto"
+              >
                 <div className="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-shine skew-x-12" />
                 <span className="relative z-10 flex items-center gap-2">
-                  <Link href="/contact">Talk to Experts</Link>
+                  Talk to Experts
                   <span
-                    className="material-symbols-outlined relative z-10 group-hover:translate-x-1 transition-transform"
+                    className="material-symbols-outlined group-hover:translate-x-1 transition-transform"
                     style={{
                       fontVariationSettings: "'wght' 400",
                       fontSize: "sm",
@@ -82,7 +86,7 @@ export default function Hero() {
                     arrow_forward
                   </span>
                 </span>
-              </button>
+              </Link>
 
               <button className="group flex items-center justify-center h-14 px-8 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold text-lg hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 w-full sm:w-auto shadow-sm hover:shadow-md">
                 <span
@@ -172,11 +176,32 @@ export default function Hero() {
           </div>
 
           {/* Right Canvas */}
-          <div className="lg:col-span-7">
+          {/* <div className="lg:col-span-7">
             <WorkflowCanvas />
-          </div>
+          </div> */}
 
-          {/* <div className="fixed inset-0 grid-bg opacity-80 -z-10 pointer-events-none"></div> */}
+          <div className="lg:col-span-7 relative w-full h-[600px] lg:h-[800px] flex items-center justify-center lg:justify-end">
+            {/* Glow background */}
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-yellow-100/30 to-amber-100/20 blur-[100px] rounded-full z-0 pointer-events-none overflow-hidden" />
+
+            {/* IMAGE WRAPPER */}
+            <div className="relative z-10 w-full h-full max-w-none rounded-l-3xl overflow-hidden shadow-2xl group border-l border-t border-b border-white/60">
+              {/* IMAGE (BACKGROUND LAYER) */}
+              <Image
+                src="/illustrations/HeroImage.png"
+                alt="Agentic AI workflow visualization"
+                fill
+                priority
+                className="object-cover z-0 opacity-90 transition-transform duration-[20s] ease-linear group-hover:scale-110"
+              />
+
+              {/* OVERLAYS */}
+              <div className="absolute inset-0 z-10 bg-gradient-to-l from-white/10 via-white/20 to-white/60 mix-blend-overlay" />
+              <div className="absolute inset-0 z-10 bg-gradient-to-r from-background-light via-transparent to-transparent opacity-80 lg:opacity-30" />
+              <div className="absolute inset-0 z-10 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30 pointer-events-none" />
+
+            </div>
+          </div>
         </div>
       </section>
     </main>
