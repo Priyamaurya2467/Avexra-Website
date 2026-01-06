@@ -5,7 +5,8 @@ export const blogs: Blog[] = [
 	   FEATURED LONG-FORM BLOG (REFERENCE LEVEL)
 	===================================================== */
 	{
-		title: "Building Autonomous Agents: A Complete Guide for Enterprise Architects",
+		title:
+			"Building Autonomous Agents: A Complete Guide for Enterprise Architects",
 		slug: "building-autonomous-agents",
 		excerpt:
 			"A deep, practical guide to designing, deploying, and governing agentic AI systems in large enterprises.",
@@ -70,7 +71,10 @@ export const blogs: Blog[] = [
 				children: [
 					{ _type: "span", text: "Traditional automation follows rigid " },
 					{ _type: "span", text: "if X then Y", marks: ["code"] },
-					{ _type: "span", text: " rules. Autonomous agents operate differently." },
+					{
+						_type: "span",
+						text: " rules. Autonomous agents operate differently.",
+					},
 				],
 			},
 
@@ -111,28 +115,36 @@ export const blogs: Blog[] = [
 				style: "normal",
 				listItem: "number",
 				level: 1,
-				children: [{ _type: "span", text: "Perception Layer (inputs, events, signals)" }],
+				children: [
+					{ _type: "span", text: "Perception Layer (inputs, events, signals)" },
+				],
 			},
 			{
 				_type: "block",
 				style: "normal",
 				listItem: "number",
 				level: 1,
-				children: [{ _type: "span", text: "Reasoning Engine (LLMs + policies)" }],
+				children: [
+					{ _type: "span", text: "Reasoning Engine (LLMs + policies)" },
+				],
 			},
 			{
 				_type: "block",
 				style: "normal",
 				listItem: "number",
 				level: 1,
-				children: [{ _type: "span", text: "Planning Module (task decomposition)" }],
+				children: [
+					{ _type: "span", text: "Planning Module (task decomposition)" },
+				],
 			},
 			{
 				_type: "block",
 				style: "normal",
 				listItem: "number",
 				level: 1,
-				children: [{ _type: "span", text: "Action Layer (tools, APIs, workflows)" }],
+				children: [
+					{ _type: "span", text: "Action Layer (tools, APIs, workflows)" },
+				],
 			},
 
 			/* ---------- H3 ---------- */
